@@ -917,12 +917,12 @@ function () {
       if (!fallbacks) return [];
       if (typeof fallbacks === 'string') fallbacks = [fallbacks];
       if (Object.prototype.toString.apply(fallbacks) === '[object Array]') return fallbacks;
-      if (!code) return fallbacks["default"] || []; // asume we have an object defining fallbacks
+      if (!code) return fallbacks.default || []; // asume we have an object defining fallbacks
 
       var found = fallbacks[code];
       if (!found) found = fallbacks[this.getScriptPartFromCode(code)];
       if (!found) found = fallbacks[this.formatLanguageCode(code)];
-      if (!found) found = fallbacks["default"];
+      if (!found) found = fallbacks.default;
       return found || [];
     }
   }, {

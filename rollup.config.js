@@ -6,6 +6,7 @@ import pkg from './package.json';
 const getBabelOptions = ({ useESModules }) => ({
   exclude: /node_modules/,
   runtimeHelpers: true,
+  presets: [['@babel/preset-env', { targets: { safari: '8' } }]],
   plugins: [
     ['@babel/transform-runtime', { useESModules }],
     '@babel/plugin-transform-block-scoping',

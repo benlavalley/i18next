@@ -4,6 +4,10 @@
     [
       "@babel/preset-env",
       {
+        "targets": {
+          "safari": "8"
+        },
+        "useBuiltIns": "entry",
         "include": [
           "transform-block-scoping"
         ]
