@@ -1,3 +1,13 @@
 {
-  "presets": ["@babel/env", "@babel/react"]
+  "presets": [
+    "@babel/react",
+    [
+      "@babel/preset-env",
+      {
+        "include": [
+          "transform-block-scoping"
+        ]
+      }
+    ]
+  ]
 }
