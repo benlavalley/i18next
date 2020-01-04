@@ -6,7 +6,10 @@ import pkg from './package.json';
 const getBabelOptions = ({ useESModules }) => ({
   exclude: /node_modules/,
   runtimeHelpers: true,
-  plugins: [['@babel/transform-runtime', { useESModules }]],
+  plugins: [
+    ['@babel/transform-runtime', { useESModules }],
+    '@babel/plugin-transform-block-scoping',
+  ],
 });
 
 const input = './src/index.js';
